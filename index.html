@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apology Letter ni Siji</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #4a4a4a, #2c2c2c);
+            color: #e0e0e0;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #a0a0a0;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        .hidden {
+            display: none;
+        }
+        button {
+            margin: 10px;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #e0e0e0;
+            background: linear-gradient(45deg, #666666, #444444);
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+        }
+        button:hover {
+            background: linear-gradient(45deg, #444444, #666666);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.7);
+        }
+        .content {
+            margin-top: 30px;
+            text-align: left;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            background: rgba(50, 50, 50, 0.9);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.5s ease;
+        }
+        .content.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .content h2 {
+            color: #a0a0a0;
+            border-bottom: 2px solid #666666;
+            padding-bottom: 10px;
+        }
+        .content p {
+            line-height: 1.6;
+            font-size: 1.1em;
+        }
+        .choice-page {
+            margin-top: 50px;
+        }
+        .choice-page h2 {
+            color: #a0a0a0;
+        }
+        .choice-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .final-message {
+            margin-top: 30px;
+            font-size: 1.3em;
+            color: #a0a0a0;
+        }
+    </style>
+</head>
+<body>
+    <div id="main-page">
+        <h1>Hi Isay!</h1>
+        <p></p>
+        
+        <button onclick="showSection('apology')">Apology</button>
+        <button onclick="showSection('reason')">Reason</button>
+        <button onclick="showSection('promise')">Promise</button>
+        <button onclick="showSection('love')">Love</button>
+        
+        <div id="apology" class="content hidden">
+            <h2>My Apology Letter</h2>
+            <p>Dear Isay,</p>
+            <p>When you said na "dili naka" even as a joke it hit me hard. I didn’t know how to respond, so I stayed silent. I wasn’t trying to ignore you, I was just hurt and confused. I realize now that not replying made things worse, and I’m truly sorry for that. I care about you deeply, and I value what we have. I hope we can talk and clear things up. I miss you. I am writing this letter to sincerely apologize, Sorry nangibabaw rajud akoang pride, Sorry kung nasakitan taka. I know that my words and actions hurt you deeply, Nag regret jud ko saako nabuhat sorry kaayo kay nangibabaw akoang ka immature. Baskin gamay ra kaayo na butang akoa jud gi Big Deal sorry jud kaayo.</p>
+            <p>I realize now how much I value our relationship and how my behavior was unacceptable. Please know that this apology comes from the bottom of my heart, and I hope you can find it in yourself to forgive me. Sorry jud kaayo say dili na nako ni usbon but I hope too nga dili nasad nimo usbon.</p>
+            <p>With all my love,<br>Siji</p>
+        </div>
+        
+        <div id="reason" class="content hidden">
+            <h2>The Reason</h2>
+            <p>Ang reason jud bantog na ing-ato ko because dili lang jud ko ganahan ug ing ato nga joke (if joke man jud to) kay akong ma huna hunaan ana is murag gihimo rako nimo ug pampalipas oras ba, mao jud na akoang ma hunahunaan
+              tapos feel nako kay murag ganahan lang ka saako pag naa ko saimong tapad like kanang pag wala ko saimo maka huna huna naka nga dili naka, mao jud na mo sulod saako utok like kanang mura rakag infatuated saako, say kung mag joke paka last ug ing ana akoa najud na tinod on di man gud ko ganahan nga ako nalang
+              diay ang naay gana saatong duha tapos ikaw wala na diay but I hope dili nato mausab.
+            </p>
+        </div>
+        
+        <div id="promise" class="content hidden">
+            <h2>My Promise</h2>
+            <p>I promise na dili na nako ni usbon but please ayaw nasad usba na mag joke ka ug ing ani. Promise nana nato kung mo ingon paka ug dili naka akoa najud na tinod on say.</p>
+        </div>
+        
+        <div id="love" class="content hidden">
+            <h2>My Love for You</h2>
+            <p>Love jud kaayo taka say, I LOVEEEE YOUUUU SOOOO MUCHHHHH dili pako ganahan mag end ta but if dili najud ka (kung tinood man to ganiha) wala koy mabuhat ana kundi i accpet nalang diba, lain kaayo ako lang ang gusto mag fix tapos ikaw dili najud diay. say let me know kung unsa jud imohang tinood na decision.</p>
+        </div>
+        
+        <button onclick="showChoicePage()" style="margin-top: 40px; background: linear-gradient(45deg, #888888, #666666);">Make Your Choice</button>
+    </div>
+    
+    <div id="choice-page" class="hidden">
+        <h1>Your Decision</h1>
+        <p>After reading my apology, please choose what you want for our relationship.</p>
+        <div class="choice-buttons">
+            <button onclick="makeChoice('yes')">Yes, I still want the relationship</button>
+            <button onclick="makeChoice('no')">No, I don't want the relationship anymore</button>
+        </div>
+        <div id="final-message" class="final-message hidden"></div>
+    </div>
+    
+    <script>
+        function showSection(id) {
+            // Hide all sections and remove show class
+            const sections = document.querySelectorAll('.content');
+            sections.forEach(section => {
+                section.classList.add('hidden');
+                section.classList.remove('show');
+            });
+            
+            // Show the selected section with animation
+            const selectedSection = document.getElementById(id);
+            selectedSection.classList.remove('hidden');
+            setTimeout(() => {
+                selectedSection.classList.add('show');
+            }, 10); // Small delay to trigger transition
+        }
+        
+        function showChoicePage() {
+            document.getElementById('main-page').classList.add('hidden');
+            document.getElementById('choice-page').classList.remove('hidden');
+        }
+        
+        function makeChoice(choice) {
+            const messageDiv = document.getElementById('final-message');
+            if (choice === 'yes') {
+                messageDiv.innerHTML = "<p>Thank you for giving us another chance. I love you I hopeeee dili nani ma usabbbb. send HI kung kani gipili nimo. </p>";
+            } else {
+                messageDiv.innerHTML = "<p>What we shared meant a lot to me. Even through the misunderstandings, I held onto the hope that we could grow together. But I also understand that sometimes, things shift in ways we didn’t expect. If this is truly the end of our chapter, I want you to know I’m grateful for the laughter, the lessons, and the love. I’m sorry for the moments I fell short, and I forgive the ones that hurt me too. I understand and respect your decision. I wish you all the happiness in the world. Baskin short time lang ta nag uban I will forever cherish that moments/memories. Just send BYE message kung kani gipili nimo then no more conversation na.</p>";
+            }
+            messageDiv.classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
